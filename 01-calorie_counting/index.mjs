@@ -15,3 +15,12 @@ data.forEach((calories) => {
 });
 
 console.log("Part 1: ", Math.max(...elfLoads));
+
+elfLoads.sort((a, b) => {
+  return b - a;
+});
+
+console.log(
+  "Part 2: ",
+  elfLoads.slice(0, 3).reduce((a, b) => a + b)
+);
